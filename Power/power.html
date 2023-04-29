@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Power Received  Calculator</title>
+    <link rel="stylesheet" href="power.css">	
+</head>
+<body>
+<div>
+	<h1>Power Transmitted Calculator </h1>	
+	<h3>Using Friis Equation</h3>
+	<h2>Received Power P<sub>r</sub> = P<sub>t</sub>  G<sub>t</sub>G<sub>r</sub> λ <sup>2</sup> / (4πd)<sup>2</sup></h2>	
+	<form name="friss">
+		<p>
+			<label>Enter value of Power transmitted in watts : </lable>
+			<input type="number" id ="pt" name="pt" >
+			<br>
+			<br>
+			<label>Enter value of wavelength of carrier in m: </lable>
+				<input type="number" id ="wave" name="wave" >
+			<br>
+			<br>
+			<label>Enter distance d in m: </lable>
+				<input type="number" id ="distance" name="distance" >
+			<br>
+			<br>
+			<label>Enter value of received gain gr: </lable>
+				<input type="number" id ="gr" name="gr" >
+			<br>
+			<br>
+			<label>Enter value of transmitted gain: </lable>
+					<input type="number" id ="gt" name="gt" >			
+			
+			
+		</p>	
+	</form>
+	<button onclick="calculate()" autocomplete="off"><strong>Answer</strong></button>
+	<table style="width:100%">
+		<tr>
+			<th> Power received in watts is </th>
+			
+		</tr>
+		<tr>
+			<td id="disp"></td>
+		</tr>
+	</table>
+	</div>
+	<script src="power.js"></script>		
+</body>	
+</html>	

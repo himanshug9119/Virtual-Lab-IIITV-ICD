@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Logic Gates</title>
+    <link rel="stylesheet" href="logical.css" />
+    <link rel="icon" href="Images/favicon.ico">
+  </head>
+
+  <body>
+    <div id="header">
+        <h1 id="welcome" >You are Welcome in Logic Gates</h1>
+        <button id="instruction" class="hbotton" onclick="instructions()">Instructions</button>
+        <button id="instruction" class="hbotton" onclick="location.href='/Home/index.html'">Home</button>
+    </div>
+    <div class="bigcontainer">
+    <div id="notcontainer" class="container">
+      <h1>NOT Gate </h1><br>
+      <label for="notin">Input Not Gate Wave</label>
+      <input type="text" id="notin"> <br>
+      <h3 class="aloutput">Output - </h3>
+      <h3 id="notoutputdisp" class="aloutput"></h3>
+      <center>
+        <button type="submit" id="btn" onclick="getnotans()">Get Answer</button>
+      </center>
+    </div>
+
+    <div id="andcontainer" class="container">
+        <h1>AND Gate </h1><br>
+        <label for="andgate">Input Wave 1 of AND Gate</label>
+        <input type="text" id="andin1" required><br>
+        <label for="andgate">Input Wave 2 of AND Gate</label>
+        <input type="text" id="andin2" required><br>
+        <h3 class="aloutput">Output - </h3>
+        <h3 id="andoutputdisp" class="aloutput"></h3>
+        <center>
+          <button type="submit" id="btn" onclick="getandans()">Get Answer</button>
+        </center>
+    </div>
+
+    <div id="nandcontainer" class="container">
+        <h1>NAND Gate </h1><br>
+        <label for="nandgate">Input Wave 1 of NAND Gate</label>
+        <input type="text" id="nandin1"><br>
+        <label for="nandgate">Input Wave 2 of NAND Gate</label>
+        <input type="text" id="nandin2"><br>
+        <h3 class="aloutput">Output - </h3>
+        <h3 id="nandoutputdisp" class="aloutput"></h3>
+        <center>
+          <button type="submit" id="btn" onclick="getnandans()">Get Answer</button>
+        </center>
+    </div>
+
+    <div id="orcontainer" class="container">
+        <h1>OR Gate </h1><br>
+        <label for="orgate">Input Wave 1 of OR Gate</label>
+        <input type="text" id="orin1"><br>
+        <label for="orgate">Input Wave 2 of OR Gate</label>
+        <input type="text" id="orin2"><br>
+        <h3 class="aloutput">Output - </h3>
+        <h3 id="oroutputdisp" class="aloutput"></h3>
+        <center>
+          <button type="submit" id="btn" onclick="getorans()">Get Answer</button>
+        </center>
+    </div>
+
+    <div id="norcontainer" class="container">
+        <h1>NOR Gate </h1><br>
+        <label for="norgate">Input Wave 1 of NOR Gate</label>
+        <input type="text" id="norin1"><br>
+        <label for="norgate">Input Wave 2 of NOR Gate</label>
+        <input type="text" id="norin2"><br>
+        <h3 class="aloutput">Output - </h3>
+        <h3 id="noroutputdisp" class="aloutput"></h3>
+        <center>
+          <button type="submit" id="btn" onclick="getnorans()">Get Answer</button>
+        </center>
+    </div>
+
+    <div id="xorcontainer" class="container">
+        <h1>XOR Gate </h1><br>
+        <label for="xorgate">Input Wave 1 of XOR Gate</label>
+        <input type="text" id="xorin1"><br>
+        <label for="xorgate">Input Wave 2 of XOR Gate</label>
+        <input type="text" id="xorin2"><br>
+        <h3 class="aloutput">Output - </h3>
+        <h3 id="xoroutputdisp" class="aloutput"></h3>
+        <center>
+          <button type="submit" id="btn" onclick="getxorans()">Get Answer</button>
+        </center>
+    </div>
+  </div>
+    <div>
+        <button id="reset" onclick="window.location.reload()">Reset</button>
+    </div><br>
+    <script src="logical.js" charset="UTF-8"></script>
+    
+  </body>
+</html>

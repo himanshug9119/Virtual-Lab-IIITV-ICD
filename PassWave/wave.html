@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AND Gate Simulation</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>AND Gate Simulation</h1>
+	<label for="wave1">Input Wave 1:</label>
+	<input type="text" id="wave1">
+	<br>
+	<label for="wave2">Input Wave 2:</label>
+	<input type="text" id="wave2">
+	<br>
+	<button onclick="simulate()">Simulate</button>
+	<br>
+	<canvas id="canvas" width="600" height="300"></canvas>
+	<script>
+		function simulate() {
+			// Get the input waves from the user
+			var wave1 = document.getElementById("wave1").value;
+			var wave2 = document.getElementById("wave2").value;
+			
+			// Convert the input waves into arrays of 0s and 1s
+			var wave1Arr = wave1.split("").map(Number);
+			var wave2Arr = wave2.split("").map(Number);
+			
+			// Calculate the result wave using the AND gate logic
+			var resultArr = wave1Arr.map(function(bit, index) {
+				return bit & wave2Arr[index];
+			});
+			
+			// Get the canvas element and its context
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			
+			// Clear the canvas
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			
+			// Draw the input waves
+			ctx.beginPath();
+			ctx.moveTo(0, canvas.height/2);
+			for (var i = 0; i < wave1Arr.length; i++) {
+				ctx.lineTo(i * 10, (wave1Arr[i] * -50) + canvas.height/2);
+			}
+			ctx.strokeStyle = "blue";
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.moveTo(0, canvas.height/2);
+			for (var i = 0; i < wave2Arr.length; i++) {
+				ctx.lineTo(i * 10, (wave2Arr[i] * -50) + canvas.height/2);
+			}
+			ctx.strokeStyle = "green";
+			ctx.stroke();
+			
+			// Draw the result wave
+			ctx.beginPath();
+			ctx.moveTo(0, canvas.height/2);
+			for (var i = 0; i < resultArr.length; i++) {
+				ctx.lineTo(i * 10, (resultArr[i] * -50) + canvas.height/2);
+			}
+			ctx.strokeStyle = "red";
+			ctx.stroke();
+		}
+	</script>
+</body>
+</html>
