@@ -10,9 +10,6 @@
     <link rel="stylesheet" type="text/css" href="numsys.css">
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/Home/round-about.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="/Home/index.html">Main Home
+                <a class="nav-link" href="/index.html">Main Home
                 </a>
               </li>
               <li class="nav-item">
@@ -42,20 +39,19 @@
           </div>
         </div>
       </nav>
-
     <div id="container" class="container bg-dark align-items-center">
         <h1 class="text-warning">Convert Any Number</h1>
         <label for="d" class="text-success">Decimal :</label>
         <input type="number" onkeyup="calculate(this.value, 10, 'd')" id="d" placeholder="Decimal Number">
 
         <label for="b" class="text-success">Binary :</label>
-        <input type="number" onkeyup="calculate(this.value, 2, 'b')" id="b" placeholder="b Number">
+        <input type="number" onkeyup="calculate(this.value, 2, 'b')" id="b" placeholder="Binary Number">
 
         <label for="o" class="text-success">Octal :</label>
-        <input type="number" onkeyup="calculate(this.value, 8, 'o')" id="o" placeholder="o Number">
+        <input type="number" onkeyup="calculate(this.value, 8, 'o')" id="o" placeholder="Octal Number">
 
         <label for="h" class="text-success">Hexadecimal :</label>
-        <input type="text" onkeyup="calculate(this.value, 16, 'h')" id="h" placeholder="h Number">
+        <input type="text" onkeyup="calculate(this.value, 16, 'h')" id="h" placeholder="Hexadecimal Number">
 
         <label for="m" class="text-success">MSB :</label>
         <input type="text" id="m" placeholder="msb Number">
