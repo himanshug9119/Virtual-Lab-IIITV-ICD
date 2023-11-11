@@ -1017,7 +1017,7 @@ section {
 /*# sourceMappingURL=style.css.map */
 
 .review{
-  background: url(/image/Project.png) no-repeat;
+  background: url(image/Project.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -1039,7 +1039,7 @@ section {
   padding: 1rem 0;
 }
 .blogs{
-  background: url(/image/Varun.png) no-repeat;
+  background: url(image/Varun.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
